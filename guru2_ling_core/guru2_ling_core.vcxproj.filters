@@ -15,9 +15,17 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="import.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="GSA C++编码规范.pdf" />
+    <ClInclude Include="compound_type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="constexpr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="auto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="decltype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
