@@ -15,19 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="compound_type.h">
+    <ClInclude Include="type_deduce.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="constexpr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="auto.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="decltype.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="built_array.h">
+    <ClInclude Include="function_template.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

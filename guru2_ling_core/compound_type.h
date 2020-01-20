@@ -53,3 +53,5 @@ const int kBufSize = 512;
 // const对象仅有一处定义，其他文件中共享
 // extern const int kBufSize = fcn(); .cpp
 // extern const int kBufSize; //.h
+
+
