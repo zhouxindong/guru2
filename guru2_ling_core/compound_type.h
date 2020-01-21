@@ -1,5 +1,7 @@
 #pragma once
 
+// 复合类型由基本类型+限定符组成
+
 static inline void lref()
 {
 	int i1 = 3;

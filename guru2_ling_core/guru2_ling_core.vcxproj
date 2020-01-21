@@ -145,6 +145,7 @@
     <ClInclude Include="compound_type.h" />
     <ClInclude Include="constexpr.h" />
     <ClInclude Include="decltype.h" />
+    <ClInclude Include="function.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

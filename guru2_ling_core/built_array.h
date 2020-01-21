@@ -12,5 +12,16 @@ int(*Parray)[10] = &a; // 指向维度为10的整型数组的指针
 int(&arrRef)[10] = a;  // 一个维度为10的整型数组的引用
 
 // 对于数组，编译器一般会把它转换为指针，一个指向数组首元素的指针
-auto ia2(a); // int *
+auto ia2(a); // int *(decay)
 decltype(a) ia3; // int[10]
+
+// 数组形参的性质: 不允许拷贝数组以及使用数组时会将其转换成指针
+void print(const int*);
+void print(const int[]);
+void print(const int[10]);
+// 上述声明等价，所以需要添加数组的维度信息
+/**
+ * 1. 结束标记(C-style string)
+ * 2. iterator(begin, end)
+ * 3. size_t
+ */

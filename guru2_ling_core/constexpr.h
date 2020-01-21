@@ -22,3 +22,9 @@ constexpr int *q = nullptr; // 顶层const
 
 constexpr int i = 42;
 constexpr const int *p = &i;
+
+/**
+ * constexpr函数的返回类型及所有形参的类型都是字面值类型
+ * constexpr不一定返回常量表达式，由编译器负责验证
+ * constexpr的定义放在头文件中
+ */
