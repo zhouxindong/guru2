@@ -21,3 +21,17 @@
  * decltype(i); // int
  * decltype((i)); // 变量表达式是一种可以作为赋值语句左值的特殊表达式，所以是 int &
  */
+/**
+ * if e is an lvalue of type T, decltype(e) -> T&
+ * if e is an xvalue of type T, decltype(e) -> T&&
+ * if e is a prvalue of type T, decltype(e) -> T
+ */
+
+// decltype(auto)
+void foo()
+{
+	int i = 42;
+	int const& ref = i;
+	auto x = ref;	// x -> int	
+	decltype(auto) y = ref; // y -> int const&
+}

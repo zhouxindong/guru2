@@ -139,8 +139,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="base_member.h" />
+    <ClInclude Include="class_template.h" />
+    <ClInclude Include="dot_template.h" />
+    <ClInclude Include="enable_if.h" />
+    <ClInclude Include="explicit_instantiation.h" />
     <ClInclude Include="function_template.h" />
+    <ClInclude Include="mixins.h" />
+    <ClInclude Include="nontype_template_paramter.h" />
+    <ClInclude Include="perfect_forwarding.h" />
+    <ClInclude Include="raw_array.h" />
+    <ClInclude Include="SFINAE.h" />
+    <ClInclude Include="special_member_template.h" />
+    <ClInclude Include="template_kind.h" />
     <ClInclude Include="type_deduce.h" />
+    <ClInclude Include="variadic_template.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="MP.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

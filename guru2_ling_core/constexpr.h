@@ -28,3 +28,25 @@ constexpr const int *p = &i;
  * constexpr不一定返回常量表达式，由编译器负责验证
  * constexpr的定义放在头文件中
  */
+
+// constexpr可以部分代替模板的编译期计算
+constexpr bool isPrime(unsigned int p)
+{
+	for (unsigned int d = 2; d <= p / 2; ++d) {
+		if (p% d == 0)
+		{
+			return false;
+		}
+	}
+	return p > 1;
+}
+
+// if constexpr可以用于任何函数，不仅仅是模板，需要的只是一个编译期的布尔表达式
+template <typename T, typename... Types>
+void print(T const& firstArg, Types const&... args)
+{
+	std::cout << firstArg << '\n';
+	if constexpr(sizeof...(args) > 0) {
+		print(args...);
+	}
+}

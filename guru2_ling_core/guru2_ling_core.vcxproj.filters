@@ -33,5 +33,20 @@
     <ClInclude Include="function.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="value_or_ref.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rvalue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="callable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="declval.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="const.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -23,3 +23,36 @@
  * auto &g = i; // 此时保留i的顶层常量属性
  * const auto &j = 42;
  */
+
+// auto的类型推断类似于模板参数使用传值语义(by value)
+void foo()
+{
+	int x;
+	auto&& rr = 42;
+	auto&& lr = x;
+}
+
+// 若利用auto定义右值引用，其行为类似完美转发，可以绑定左值引用和右值引用(可用于接收函数的返回值)
+template <typename Container>
+void g(Container c)
+{
+	for (auto&& x : c)	// no additional copies are made of the values
+	{
+
+	}
+}
+
+auto f(int)
+{
+	return 42;
+}
+
+auto f2() -> auto
+{
+	return 42;
+}
+
+auto lm = [](int x) /* -> auto */
+{
+	return f(x);
+};
