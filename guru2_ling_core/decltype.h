@@ -35,3 +35,8 @@ void foo()
 	auto x = ref;	// x -> int	
 	decltype(auto) y = ref; // y -> int const&
 }
+
+template <typename T1, typename T2>
+struct PlusResult {
+	using Type = decltype(T1() + T2());
+};

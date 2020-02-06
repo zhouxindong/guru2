@@ -150,6 +150,7 @@
     <ClInclude Include="declval.h" />
     <ClInclude Include="function.h" />
     <ClInclude Include="rvalue.h" />
+    <ClInclude Include="static.h" />
     <ClInclude Include="value_or_ref.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

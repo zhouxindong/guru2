@@ -13,46 +13,46 @@
 /*
 ** defined class data member
 ** generated data set|get function automatic
-** usage: name -> get_name|set_name (_name)
+** usage: name -> name|set_name (name_)
 ** readonly means no setter
 ** _INIT means use initialized value
 */
 #pragma region auto_property
 
-#define _DEF_PROPERTY_INIT(type, name, value) type name##_{ value };
-#define _DEF_PROPERTY(type, name) type name##_;
+#define DEF_PROPERTY_INIT(type, name, value) type name##_{ value };
+#define DEF_PROPERTY(type, name) type name##_;
 
-#define _GET_PROPERTY(type, name) type name() const {return name##_;}
-#define _GET_PROPERTY_CONSTREF(type, name) const type & name() const {return name##_;}
-#define _GET_PROPERTY_REF(type, name) type & name() const {return name##_;}
+#define GET_PROPERTY(type, name) type name() const {return name##_;}
+#define GET_PROPERTY_CONSTREF(type, name) const type & name() const {return name##_;}
+#define GET_PROPERTY_REF(type, name) type & name() const {return name##_;}
 
-#define _SET_PROPERTY(type, name) void set_##name(const type & value){name##_ = value;}
+#define SET_PROPERTY(type, name) void set_##name(const type & value){name##_ = value;}
 
-#define _PROPERTY(type, name) \
+#define PROPERTY(type, name) \
 private:\
-	_DEF_PROPERTY(type, name) \
+	DEF_PROPERTY(type, name) \
 public:\
-	_GET_PROPERTY_CONSTREF(type, name) \
-	_SET_PROPERTY(type, name)
+	GET_PROPERTY_CONSTREF(type, name) \
+	SET_PROPERTY(type, name)
 
-#define _PROPERTY_INIT(type, name, value) \
+#define PROPERTY_INIT(type, name, value) \
 private:\
-	_DEF_PROPERTY_INIT(type, name, value) \
+	DEF_PROPERTY_INIT(type, name, value) \
 public:\
-	_GET_PROPERTY_CONSTREF(type, name) \
-	_SET_PROPERTY(type, name)
+	GET_PROPERTY_CONSTREF(type, name) \
+	SET_PROPERTY(type, name)
 
-#define _PROPERTY_READONLY(type, name) \
+#define PROPERTY_READONLY(type, name) \
 private:\
-	_DEF_PROPERTY(type, name) \
+	DEF_PROPERTY(type, name) \
 public:\
-	_GET_PROPERTY_CONSTREF(type, name)
+	GET_PROPERTY_CONSTREF(type, name)
 
-#define _PROPERTY_READONLY_INIT(type, name, value) \
+#define PROPERTY_READONLY_INIT(type, name, value) \
 private:\
-	_DEF_PROPERTY_INIT(type, name, value) \
+	DEF_PROPERTY_INIT(type, name, value) \
 public:\
-	_GET_PROPERTY_CONSTREF(type, name)
+	GET_PROPERTY_CONSTREF(type, name)
 
 #pragma endregion
 

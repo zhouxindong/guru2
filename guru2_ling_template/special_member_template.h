@@ -124,7 +124,7 @@ public:
 	C(T&&) {}		// #3
 };
 
-void foo()
+void foo4()
 {
 	C x;
 	C x2{ x };				// #3

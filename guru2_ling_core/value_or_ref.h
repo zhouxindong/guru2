@@ -67,11 +67,11 @@ void foo3()
  * 但对于大对象性能有损。调用者仍可以使用std::cref(), std::ref()来达到传递ref的作用
  */
 /**
- * 2. by ref
+ * 2. by ref(&,&&)
  * 对于大对象性能更好
  * (1)已有对象为lvalue ref
  * (2)临时对象prvalue, 可移动对象xvalue为rvalue ref
  * (3)再者都可以使用forwarding ref
  * 不会decay，所以对于字符串字面值或原始数组要格外小心。
- * 对于forwarding ref, T可能会推断为ref. 特别是T可能会用于返回类型时。
+ * 对于forwarding ref, T可能会推断为ref. 特别是T可能会用于返回类型时(T唯一会被推断为引用的情形)。
  */

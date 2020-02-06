@@ -38,5 +38,11 @@
     <ClCompile Include="dot_template_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="type_erasure_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tuple_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -28,6 +28,9 @@
     <Filter Include="Header Files\MP">
       <UniqueIdentifier>{ceb90167-147e-4ac7-a671-0d9a5167c81d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\designs">
+      <UniqueIdentifier>{fa992dbd-5fcc-40b2-9d46-cc36ed382236}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class_template.h">
@@ -74,6 +77,57 @@
     </ClInclude>
     <ClInclude Include="explicit_instantiation.h">
       <Filter>Header Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="variable_template.h">
+      <Filter>Header Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="reference.h">
+      <Filter>Header Files\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="qualifier.h">
+      <Filter>Header Files\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="decay.h">
+      <Filter>Header Files\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="predicate.h">
+      <Filter>Header Files\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="result_type.h">
+      <Filter>Header Files\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="is_convertible.h">
+      <Filter>Header Files\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="detect_member.h">
+      <Filter>Header Files\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="if_then_else.h">
+      <Filter>Header Files\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="type_classification.h">
+      <Filter>Header Files\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="policy_traits.h">
+      <Filter>Header Files\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="CRTP.h">
+      <Filter>Header Files\inheritance</Filter>
+    </ClInclude>
+    <ClInclude Include="type_erasure.h">
+      <Filter>Header Files\designs</Filter>
+    </ClInclude>
+    <ClInclude Include="value_metaprogram.h">
+      <Filter>Header Files\MP</Filter>
+    </ClInclude>
+    <ClInclude Include="Ratio.h">
+      <Filter>Header Files\MP</Filter>
+    </ClInclude>
+    <ClInclude Include="type_list.h">
+      <Filter>Header Files\MP</Filter>
+    </ClInclude>
+    <ClInclude Include="Tuple.h">
+      <Filter>Header Files\MP</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

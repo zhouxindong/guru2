@@ -48,5 +48,8 @@
     <ClInclude Include="const.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="static.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

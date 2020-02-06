@@ -1,10 +1,11 @@
 #pragma once
 /**
  * std::declval<>()函数模板用于一个特定类型的对象引用的占位符
- * 只能用于非求值运算符
+ * 只能用于非求值运算符(decltype, sizeof)
  */
 
 #include <utility>
+#include <type_traits>
 
 template <
 	typename T1, typename T2,
@@ -13,3 +14,16 @@ template <
 {
 	return b < a ? a : b;
 }
+
+/**
+ * declval()有意未给出定义，使得其只能用于decltype, sizeof等不需要定义的场合
+ * 1. 对于引用类型，其返回类型为右值引用，这使得其可以用于无法正常从函数返回的情形，如抽象类类型或数组类型
+ */
+template <typename T>
+std::add_rvalue_reference_t<T> declval2() noexcept;
+
+template <typename T1, typename T2>
+struct PlusResult {
+	using Type = decltype(std::declval<T1>() + std::declval<T2>());
+};
+

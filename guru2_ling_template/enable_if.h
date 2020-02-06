@@ -22,3 +22,19 @@ template <typename T,
 	void foo() {
 }
 	
+template <typename Key, typename Value, typename = void>
+class Dictionary {};
+
+template <typename Key, typename Value>
+class Dictionary<Key, Value,
+	std::enable_if_t<HasLess<Key> && !HasHash<Key>>>	// #2
+{
+};
+
+template <typename Key, typename Value>
+class Dictionary<Key, Value,
+	std::enable_if_t<HashHash<Key>>>					// #3
+{
+};
+
+// 2#和3#条件必须互斥

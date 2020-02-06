@@ -152,6 +152,8 @@
     <ClCompile Include="raw_array_test.cpp" />
     <ClCompile Include="special_member_template_test.cpp" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Tuple_test.cpp" />
+    <ClCompile Include="type_erasure_test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

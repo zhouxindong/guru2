@@ -141,18 +141,35 @@
   <ItemGroup>
     <ClInclude Include="base_member.h" />
     <ClInclude Include="class_template.h" />
+    <ClInclude Include="CRTP.h" />
+    <ClInclude Include="decay.h" />
+    <ClInclude Include="detect_member.h" />
     <ClInclude Include="dot_template.h" />
     <ClInclude Include="enable_if.h" />
     <ClInclude Include="explicit_instantiation.h" />
     <ClInclude Include="function_template.h" />
+    <ClInclude Include="if_then_else.h" />
+    <ClInclude Include="is_convertible.h" />
     <ClInclude Include="mixins.h" />
     <ClInclude Include="nontype_template_paramter.h" />
     <ClInclude Include="perfect_forwarding.h" />
+    <ClInclude Include="policy_traits.h" />
+    <ClInclude Include="predicate.h" />
+    <ClInclude Include="qualifier.h" />
+    <ClInclude Include="Ratio.h" />
     <ClInclude Include="raw_array.h" />
+    <ClInclude Include="reference.h" />
+    <ClInclude Include="result_type.h" />
     <ClInclude Include="SFINAE.h" />
     <ClInclude Include="special_member_template.h" />
     <ClInclude Include="template_kind.h" />
+    <ClInclude Include="Tuple.h" />
+    <ClInclude Include="type_classification.h" />
     <ClInclude Include="type_deduce.h" />
+    <ClInclude Include="type_erasure.h" />
+    <ClInclude Include="type_list.h" />
+    <ClInclude Include="value_metaprogram.h" />
+    <ClInclude Include="variable_template.h" />
     <ClInclude Include="variadic_template.h" />
   </ItemGroup>
   <ItemGroup>

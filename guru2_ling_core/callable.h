@@ -44,7 +44,7 @@ void foo()
  * 2. 函数对象运算符通常声明为const
  */
 
-// 使用类成员函数作为回调函数(需要处理附加参数)
+// 使用类成员函数作为回调函数(需要处理附加参数, this pointer)
 template <typename Iter, typename Callable, typename... Args>
 void foreach(Iter current, Iter end, Callable op, Args const&... args)
 {
