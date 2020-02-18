@@ -31,6 +31,9 @@
     <Filter Include="Header Files\designs">
       <UniqueIdentifier>{fa992dbd-5fcc-40b2-9d46-cc36ed382236}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\STL_type_traits">
+      <UniqueIdentifier>{c11c619a-3c2e-4c07-aeda-e98c9684e43c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class_template.h">
@@ -128,6 +131,24 @@
     </ClInclude>
     <ClInclude Include="Tuple.h">
       <Filter>Header Files\MP</Filter>
+    </ClInclude>
+    <ClInclude Include="Variant.h">
+      <Filter>Header Files\MP</Filter>
+    </ClInclude>
+    <ClInclude Include="debug_it.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="basic.h">
+      <Filter>Header Files\STL_type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="integral_constant.h">
+      <Filter>Header Files\STL_type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="primary_type.h">
+      <Filter>Header Files\STL_type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="compound_type.h">
+      <Filter>Header Files\STL_type_traits</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

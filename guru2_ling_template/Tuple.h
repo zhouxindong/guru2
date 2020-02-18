@@ -15,9 +15,13 @@ public:
 	Tuple() {
 	}
 
-	// Tuple<int, double, std::string> t(17, 3.14, "Hello");
 	Tuple(Head const& head, Tuple<Tail...> const& tail)
 		: head(head), tail(tail)
+	{
+	}
+
+	Tuple(Head const& head, Tail const&... tail)
+		: head(head), tail(tail...)
 	{
 	}
 
@@ -153,25 +157,25 @@ struct IsEmpty<Tuple<>> {
 };
 
 template <typename Head, typename... Tail>
-class Front<Tuple<Head, Tail...>> {
+class FrontT<Tuple<Head, Tail...>> {
 public:
 	using Type = Head;
 };
 
 template <typename Head, typename... Tail>
-class PopFront<Tuple<Head, Tail...>> {
+class PopFrontT<Tuple<Head, Tail...>> {
 public:
 	using Type = Tuple<Tail...>;
 };
 
 template <typename... Types, typename Element>
-class PushFront<Tuple<Types...>, Element> {
+class PushFrontT<Tuple<Types...>, Element> {
 public:
 	using Type = Tuple<Element, Types...>;
 };
 
 template <typename... Types, typename Element>
-class PushBack<Tuple<Types...>, Element> {
+class PushBackT<Tuple<Types...>, Element> {
 public:
 	using Type = Tuple<Types..., Element>;
 };
@@ -179,11 +183,43 @@ public:
 /**
  * adding and removing from a Tuple
  */
-//template <typename... Types, typename Element>
-//using PushFrontT = typename PushFront<Tuple<Types...>, Element>::Type;
-
 template <typename... Types, typename V>
-typename PushFront<Tuple<Types...>, V>::Type pushFront(Tuple<Types...> const& tuple, V const& value)
+PushFront<Tuple<Types...>, V> pushFront(Tuple<Types...> const& tuple, V const& value)
 {
-	return typename PushFront<Tuple<Types...>, V>::Type(value, tuple);
+	return PushFront<Tuple<Types...>, V>(value, tuple);
+}
+
+template <typename V>
+Tuple<V> pushBack(Tuple<> const&, V const& value)
+{
+	return Tuple<V>(value);
+}
+
+template <typename Head, typename... Tail, typename V>
+Tuple<Head, Tail..., V>
+pushBack(Tuple<Head, Tail...> const& tuple, V const& value)
+{
+	return Tuple<Head, Tail..., V>(tuple.getHead(),
+		pushBack(tuple.getTail(), value));
+}
+
+template <typename... Types>
+PopFront<Tuple<Types...>>
+popFront(Tuple<Types...> const& tuple)
+{
+	return tuple.getTail();
+}
+
+/**
+ * Reversing a Tuple
+ */
+Tuple<> reverse(Tuple<> const& t)
+{
+	return t;
+}
+
+template <typename Head, typename... Tail>
+Reverse<Tuple<Head, Tail...>> reverse(Tuple<Head, Tail...> const& t)
+{
+	return pushBack(reverse(t.getTail()), t.getHead());
 }

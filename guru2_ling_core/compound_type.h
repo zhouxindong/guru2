@@ -52,5 +52,16 @@ static inline int fcn()
 	return 0;
 }
 
+/**
+ * compound
+  1. member_pointer: member_object_pointer, member_function_pointer
+  2. pointer
+  3. enum
+  4. class(lambda)
+  5. union
+  6. array
+  7. reference: lvalue_reference, rvalue_reference
+  8. function
+ */
 
 

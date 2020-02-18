@@ -10,77 +10,92 @@ class Typelist
  * Front
  */
 template <typename List>
-class Front;
+class FrontT;
 
 template <typename Head, typename... Tail>
-class Front<Typelist<Head, Tail...>>
+class FrontT<Typelist<Head, Tail...>>
 {
 public:
 	using Type = Head;
 };
 
+template <typename List>
+using Front = typename FrontT<List>::Type;
+
 /**
  * PopFront
  */
 template <typename List>
-class PopFront;
+class PopFrontT;
 
 template <typename Head, typename... Tail>
-class PopFront<Typelist<Head, Tail...>> {
+class PopFrontT<Typelist<Head, Tail...>> {
 public:
 	using Type = Typelist<Tail...>;
 };
+
+template <typename List>
+using PopFront = typename PopFrontT<List>::Type;
 
 /**
  * PushFront
  */
 template <typename List, typename NewElement>
-class PushFront;
+class PushFrontT;
 
 template <typename... Elements, typename NewElement>
-class PushFront<Typelist<Elements...>, NewElement> {
+class PushFrontT<Typelist<Elements...>, NewElement> {
 public:
 	using Type = Typelist<NewElement, Elements...>;
 };
+
+template <typename List, typename NewElement>
+using PushFront = typename PushFrontT<List, NewElement>::Type;
 
 /**
  * NthElement
  */
 // recursive case
 template <typename List, unsigned N>
-class NthElement : public NthElement<PopFront<List>, N - 1>
+class NthElementT : public NthElementT<PopFront<List>, N - 1>
 {
 };
 
 // basis case
 template <typename List>
-class NthElement<List, 0> : public Front<List>
+class NthElementT<List, 0> : public FrontT<List>
 {
 };
+
+template <typename List, unsigned N>
+using NthElement = typename NthElementT<List, N>::Type;
 
 /**
  * LargestType
  */
 template <typename List>
-class LargestType;
+class LargestTypeT;
 
 template <typename List>
-class LargestType
+class LargestTypeT
 {
 private:
 	using First = Front<List>;
-	using Rest = typename LargestType<PopFront<List>>::Type;
+	using Rest = typename LargestTypeT<PopFront<List>>::Type;
 
 public:
 	using Type = std::conditional_t<(sizeof(First) >= sizeof(Rest)), First, Rest>;
 };
 
 template <>
-class LargestType<Typelist<>>
+class LargestTypeT<Typelist<>>
 {
 public:
 	using Type = char;
 };
+
+template <typename List>
+using LargestType = typename LargestTypeT<List>::Type;
 
 /**
  * IsEmpty
@@ -102,28 +117,34 @@ public:
  * PushBack
  */
 template <typename List, typename NewElement>
-class PushBack;
+class PushBackT;
 
 template <typename... Elements, typename NewElement>
-class PushBack<Typelist<Elements...>, NewElement>
+class PushBackT<Typelist<Elements...>, NewElement>
 {
 public:
 	using Type = Typelist<Elements..., NewElement>;
 };
+
+template <typename List, typename NewElement>
+using PushBack = typename PushBackT<List, NewElement>::Type;
                                                                           
 /**
  * Reverse
  */
 template <typename List, bool Empty = IsEmpty<List>::value>
-class Reverse;
+class ReverseT;
 
 template <typename List>
-class Reverse<List, false> : public PushBack<Reverse<PopFront<List>>, Front<List>>
+using Reverse = typename ReverseT<List>::Type;
+
+template <typename List>
+class ReverseT<List, false> : public PushBackT<Reverse<PopFront<List>>, Front<List>>
 {
 };
 
 template <typename List>
-class Reverse<List, true>
+class ReverseT<List, true>
 {
 public:
 	using Type = List;
@@ -133,10 +154,13 @@ public:
  * PopBack
  */
 template <typename List>
-class PopBack {
+class PopBackT {
 public:
 	using Type = Reverse<PopFront<Reverse<List>>>;
 };
+
+template <typename List>
+using PopBack = typename PopBackT<List>::Type;
 
 /**
  * AddConst

@@ -44,5 +44,11 @@
     <ClCompile Include="Tuple_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="type_list_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

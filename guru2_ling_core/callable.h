@@ -93,3 +93,29 @@ decltype(auto) call(Callable&& op, Args&&... args) // decltype(auto)可以返回ref,
 		return ret;
 	}
 }
+
+/**
+ * bool foo(int, double);
+ 声明了一个函数类型bool(int, double)，及一个此类型的对象foo
+ bool(*fp)(int, double); // 声明一个函数指针对象，其底层类型为bool(int, double), 此时指针未初始化
+ fp = foo; // foo会自动转换为指针
+ fp = &foo; // 效果一样
+ fp(3, 4.4);
+ (*fp)(3, 4.4);
+ */
+
+/**
+ * 和数组类似，不能定义函数类型的形参(可以定义，只是decay为指针)
+ 形参可以是指向函数的指针(可以定义函数类型的参数，只是decay为指针)
+ typedef bool Func(const string&, const string&);
+ typedef decltype(lengthCompare) Func2;
+
+ typedef bool(*FuncP)(const string&, const string&);
+ typedef decltype(lengthCompare)* FuncP2;
+ */
+
+/**
+ * bind	通用函数适配器
+ auto newCallable = bind(callable, arg_list)
+ arg_list中的占位符_n(1...)，表示newCallable中对应位置的参数
+ */

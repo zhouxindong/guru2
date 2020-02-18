@@ -140,8 +140,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="base_member.h" />
+    <ClInclude Include="basic.h" />
     <ClInclude Include="class_template.h" />
+    <ClInclude Include="compound_type.h" />
     <ClInclude Include="CRTP.h" />
+    <ClInclude Include="debug_it.h" />
     <ClInclude Include="decay.h" />
     <ClInclude Include="detect_member.h" />
     <ClInclude Include="dot_template.h" />
@@ -149,12 +152,14 @@
     <ClInclude Include="explicit_instantiation.h" />
     <ClInclude Include="function_template.h" />
     <ClInclude Include="if_then_else.h" />
+    <ClInclude Include="integral_constant.h" />
     <ClInclude Include="is_convertible.h" />
     <ClInclude Include="mixins.h" />
     <ClInclude Include="nontype_template_paramter.h" />
     <ClInclude Include="perfect_forwarding.h" />
     <ClInclude Include="policy_traits.h" />
     <ClInclude Include="predicate.h" />
+    <ClInclude Include="primary_type.h" />
     <ClInclude Include="qualifier.h" />
     <ClInclude Include="Ratio.h" />
     <ClInclude Include="raw_array.h" />
@@ -171,6 +176,7 @@
     <ClInclude Include="value_metaprogram.h" />
     <ClInclude Include="variable_template.h" />
     <ClInclude Include="variadic_template.h" />
+    <ClInclude Include="Variant.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="MP.txt" />

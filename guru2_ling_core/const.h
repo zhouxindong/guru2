@@ -22,3 +22,14 @@ void foo()
 	Message<hello11> msg11;
 	//Message<hello17> msg17;
 }
+
+/**
+ * 类成员函数const时，其实是修改隐式this指针的类型
+ 缺省时this类型是指向类类型非常量版本的常量指针: type *const
+ 所以其不能绑定到一个常量对象上。
+ 用const修饰成员函数，其实是修改了this指针的类型: const type *const，使得其能够被绑定的对象范围扩大了
+
+ 所以const成员和非const成员函数可以重载，因为其隐式的this指针的类型不同，让其返回不同类型(const, nonconst)对象
+ 调用时，const对象自匹配const版本，非const匹配非const版本
+ 通常对于返回引用类型的函数提供两个版本: const版本和非const版本
+ */

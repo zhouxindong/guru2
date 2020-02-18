@@ -27,3 +27,13 @@ struct PlusResult {
 	using Type = decltype(std::declval<T1>() + std::declval<T2>());
 };
 
+/**
+ * std::declval<T>(): 产生一个对象(右值引用)，不调用任何构造函数或初始化
+ 可以在非求值表达式中用于处理任意类型的对象或函数
+ template <typename T>
+ add_rvalue_reference_t<T> declval() noexcept;
+ 1. 若T是普通类型或右值引用，结果为T&&
+ 2. 若T是左值引用，结果为T&
+ 3. 若T是void,，结果为void
+ */
+

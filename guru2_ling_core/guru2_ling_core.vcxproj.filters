@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\C11+">
+      <UniqueIdentifier>{336fd3c3-8de6-4417-af38-b58ac4a0555c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\class">
+      <UniqueIdentifier>{cf7cd03f-5368-441f-87bf-f4110afbe0c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\STL">
+      <UniqueIdentifier>{e18e6646-8c95-4d87-a9b9-65606cbf61b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="compound_type.h">
@@ -36,9 +45,6 @@
     <ClInclude Include="value_or_ref.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="rvalue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="callable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -50,6 +56,57 @@
     </ClInclude>
     <ClInclude Include="static.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="declaration_definition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="value_category.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="overload_resolve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="initializer_list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="lambda.h">
+      <Filter>Header Files\C11+</Filter>
+    </ClInclude>
+    <ClInclude Include="derived_ctor.h">
+      <Filter>Header Files\class</Filter>
+    </ClInclude>
+    <ClInclude Include="delegate_ctor.h">
+      <Filter>Header Files\class</Filter>
+    </ClInclude>
+    <ClInclude Include="aggregate.h">
+      <Filter>Header Files\class</Filter>
+    </ClInclude>
+    <ClInclude Include="sequence_container.h">
+      <Filter>Header Files\STL</Filter>
+    </ClInclude>
+    <ClInclude Include="container.h">
+      <Filter>Header Files\STL</Filter>
+    </ClInclude>
+    <ClInclude Include="map_container.h">
+      <Filter>Header Files\STL</Filter>
+    </ClInclude>
+    <ClInclude Include="unorder_container.h">
+      <Filter>Header Files\STL</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm.h">
+      <Filter>Header Files\STL</Filter>
+    </ClInclude>
+    <ClInclude Include="iterator_adapter.h">
+      <Filter>Header Files\STL</Filter>
+    </ClInclude>
+    <ClInclude Include="iterator_category.h">
+      <Filter>Header Files\STL</Filter>
+    </ClInclude>
+    <ClInclude Include="shared_ptr.h">
+      <Filter>Header Files\C11+</Filter>
+    </ClInclude>
+    <ClInclude Include="rvalue.h">
+      <Filter>Header Files\C11+</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
