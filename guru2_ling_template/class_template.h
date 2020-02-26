@@ -106,3 +106,30 @@ template <typename Iterator>
 class Advance<Iterator, std::bidirectional_iterator_tag>
 {
 };
+
+/**
+ * 特化需要注意的是一定要在使用之前定义，否则就会使用模板去生成了
+ 特化定义要和模板原本在同一名称空间中
+ 示例: 为Sales_data类型特化std::hash<T>，使其类型可以置于无序容器中
+ */
+#include <xstddef>
+#include <string>
+struct Sales_data {
+	std::string bookNo;
+	unsigned int units_sold;
+	double revenue;
+};
+namespace std {
+	template <>
+	struct hash<Sales_data>
+	{
+		typedef size_t result_type;
+		typedef Sales_data argument_type; // need ==
+		size_t operator() (const Sales_data& s) const {
+			return hash<std::string>()(s.bookNo) ^
+				hash<unsigned int>()(s.units_sold) ^
+				hash<double>()(s.revenue);
+
+		}
+	};
+}

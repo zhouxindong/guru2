@@ -25,3 +25,10 @@ void print(const int[10]);
  * 2. iterator(begin, end)
  * 3. size_t
  */
+
+/**
+ * 字符串字面常量"hello" -> const char[6]
+ decltype("hello") -> const char(&)[6]
+ 非字符串字面常量，为右值
+ decltype(1) -> int
+ */

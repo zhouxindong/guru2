@@ -1,6 +1,30 @@
+/**
+ * @file gvals2.h
+ * @brief provide the most basic stand for each head file defined in guru2
+ * @details nothing
+ * @author zhouxindong
+ * @email 13611050407@139.com
+ * @version V2.0
+ * @date 2020-01-21
+ */
+
 #pragma once
 #ifndef _GURU2_GVALS2_H_
 #define _GURU2_GVALS2_H_
+
+/**
+* to resolve the redefinitions between WinSock2.h and Windows.h
+1. include first WinSock2.h, then Windows.h
+2. or #define WIN32_LEAN_AND_MEAN
+*/
+
+// 1.
+#include <WinSock2.h>
+#include <Windows.h>
+
+// 2.
+//#define  WIN32_LEAN_AND_MEAN
+
 
 #define _GURU2_BEGIN namespace guru2 {
 #define _GURU2_END   }

@@ -108,5 +108,35 @@
     <ClInclude Include="rvalue.h">
       <Filter>Header Files\C11+</Filter>
     </ClInclude>
+    <ClInclude Include="pod.h">
+      <Filter>Header Files\class</Filter>
+    </ClInclude>
+    <ClInclude Include="allocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ctor.h">
+      <Filter>Header Files\class</Filter>
+    </ClInclude>
+    <ClInclude Include="swap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RTTI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="operator.h">
+      <Filter>Header Files\class</Filter>
+    </ClInclude>
+    <ClInclude Include="basic.h">
+      <Filter>Header Files\class</Filter>
+    </ClInclude>
+    <ClInclude Include="friend.h">
+      <Filter>Header Files\class</Filter>
+    </ClInclude>
+    <ClInclude Include="operator_new.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tuple.h">
+      <Filter>Header Files\STL</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

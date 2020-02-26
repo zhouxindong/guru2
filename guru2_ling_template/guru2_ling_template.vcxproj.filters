@@ -150,6 +150,12 @@
     <ClInclude Include="compound_type.h">
       <Filter>Header Files\STL_type_traits</Filter>
     </ClInclude>
+    <ClInclude Include="result_of.h">
+      <Filter>Header Files\type_traits</Filter>
+    </ClInclude>
+    <ClInclude Include="friend.h">
+      <Filter>Header Files\basic</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="MP.txt">

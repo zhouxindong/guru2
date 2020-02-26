@@ -73,7 +73,7 @@ void foo3()
 {
 	std::unique_ptr<int> up(new int(42));
 	// unique_ptr不支持拷贝构造、赋值，但可以将所有权转移
-	// 但是可以拷贝或赋值一个将要被销毁的unique_ptr，如函数返回值
+	// 但是可以拷贝或赋值一个将要被销毁的unique_ptr，如函数返回值(支持移动构造、赋值)
 
 	std::unique_ptr<std::string> p1(new std::string("hello"));
 	std::unique_ptr<std::string> p2(p1.release()); // p1置空，返回值初始化p2

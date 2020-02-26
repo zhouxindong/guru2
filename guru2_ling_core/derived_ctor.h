@@ -30,7 +30,7 @@ struct A {
 
 template <typename Base>
 struct B : Base {
-	using Base::Base;
+	using Base::Base; // 默认、拷贝和移动构造函数不会被继承
 };
 
 int main()

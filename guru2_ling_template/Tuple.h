@@ -223,3 +223,18 @@ Reverse<Tuple<Head, Tail...>> reverse(Tuple<Head, Tail...> const& t)
 {
 	return pushBack(reverse(t.getTail()), t.getHead());
 }
+
+/**
+ * 另一个定义方式
+ */
+template <typename... Elements> // 变长模板声明
+class Tuple2;
+
+template <typename Head, typename... Tail>
+class Tuple2<Head, Tail...> : private Tuple2<Tail...> // 递归的偏特化定义
+{
+	Head head;
+};
+
+template <>	// 边界条件
+class Tuple2<> {};

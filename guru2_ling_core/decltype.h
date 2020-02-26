@@ -40,3 +40,7 @@ template <typename T1, typename T2>
 struct PlusResult {
 	using Type = decltype(T1() + T2());
 };
+
+using size_t = decltype(sizeof(0));
+using ptrdiff_t = decltype((int*)0 - (int*)0);
+using nullptr_t = decltype(nullptr);

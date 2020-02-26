@@ -150,6 +150,7 @@
     <ClInclude Include="dot_template.h" />
     <ClInclude Include="enable_if.h" />
     <ClInclude Include="explicit_instantiation.h" />
+    <ClInclude Include="friend.h" />
     <ClInclude Include="function_template.h" />
     <ClInclude Include="if_then_else.h" />
     <ClInclude Include="integral_constant.h" />
@@ -164,6 +165,7 @@
     <ClInclude Include="Ratio.h" />
     <ClInclude Include="raw_array.h" />
     <ClInclude Include="reference.h" />
+    <ClInclude Include="result_of.h" />
     <ClInclude Include="result_type.h" />
     <ClInclude Include="SFINAE.h" />
     <ClInclude Include="special_member_template.h" />

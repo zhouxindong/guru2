@@ -16,3 +16,10 @@
  */
 
 // 函数重载无法跨越不同的作用域!(类的继承体系中基类和派生类定义的同名非虚拟函数无法形成重载)
+
+/**
+ * 函数对象
+ plus<T>, minus<T>, multiplies<T>, divides<T>, modulus<T>, negate<T>
+ equal_to<T>, not_equal_to<T>, greater<T>, greater_equal<T>, less<T>, less_equal<T>
+ logical_and<T>, logical_or<T>, logical_not<T>
+ */

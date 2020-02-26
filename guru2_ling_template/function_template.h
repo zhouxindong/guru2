@@ -78,6 +78,16 @@ template <typename T> void f(T*);
 template <typename T> void f(Array<T>);
 
 /**
+ * 使用右值引用的函数重载
+ */
+template <typename T>
+void f(T&&); // 绑定到非const右值
+
+template <typename T>
+void f(const T&);	// 左值和const右值
+
+
+/**
  * 利用特定类型的更多属性信息，通过重载实现更好的算法实现
  */
 template <typename T>
@@ -124,3 +134,22 @@ void advanceIter(Iterator& x, Distance n)
 {
 	advanceIterImpl(x, n, typename std::iterator_traits<Iterator>::iterator_category()); 
 }
+
+/**
+ * 函数模板可以被另一个模板或普通函数重载，只要参数的类型或数量不同。
+ 重载匹配
+ 1. 候选函数包括所有模板实参推断成功的函数模板实例
+ 2. 如果有多个匹配相同，普通函数优先，更特化的模板函数优先
+ */
+
+/**
+ * 定义函数模板特化
+ 必须为原模板中的每个模板参数都提供实参
+ (特化的类型必须与声明中的模板中对应的类型匹配，只是替换T本身)
+ 注意: 一个特化版本本质上是一个实例，而非函数名的一个重载版本。
+ */
+template <typename T>
+int compare(const T&, const T&);
+
+template<>
+int compare(const char* const& p1, const char* const& p2); // T -> const char*

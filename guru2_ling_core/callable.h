@@ -119,3 +119,14 @@ decltype(auto) call(Callable&& op, Args&&... args) // decltype(auto)可以返回ref,
  auto newCallable = bind(callable, arg_list)
  arg_list中的占位符_n(1...)，表示newCallable中对应位置的参数
  */
+
+/**
+ * 不同类型的可调用对象却可能有相同的调用形式
+ 调用形式由返回类型和实参类型组成，一种调用形式对应一个函数类型
+ 问题是能不能把相同的调用形式看成相同的类型呢?比如一个函数调用映射表
+ function<T>，T就是调用形式
+ result_type
+ argument_type
+ first_argument_type
+ second_argument_type
+ */

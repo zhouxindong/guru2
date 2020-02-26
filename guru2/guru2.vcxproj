@@ -145,8 +145,11 @@
     <None Include="GSA C++编码规范.pdf" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="core\mmtimer.h" />
+    <ClInclude Include="core\utility.h" />
     <ClInclude Include="dump\assert_any.h" />
     <ClInclude Include="gvals2.h" />
+    <ClInclude Include="slice\noncopyable.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

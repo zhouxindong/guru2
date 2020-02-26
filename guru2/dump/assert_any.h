@@ -44,7 +44,9 @@ _CRT_BEGIN_C_HEADER
 	abort();
 }
 
-
+/**
+ * @brief assert can be used what ever debug or release mode in running
+ */
 #define ASSERT_ANY(expression) (void)(												         \
             (!!(expression)) ||                                                              \
             (wassert_(_CRT_WIDE(#expression), _CRT_WIDE(__FILE__), _CRT_WIDE(__FUNCTION__), (unsigned)(__LINE__),_CRT_WIDE(__DATE__), _CRT_WIDE(__TIME__)), 0) \

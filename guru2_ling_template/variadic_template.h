@@ -81,3 +81,24 @@ void printByIdx(T t, Indices<Idx...>)
  */
 
 // 包扩展可用于任何逗号分隔列表语句中(相当于自动扩展每个元素组成逗号表达式)
+
+/**
+ * 对于一个参数包，除了sizeof...外，唯一能做的事情就是扩展
+ 扩展包时，要提供用于每个扩展元素的模式。在分解为构成的元素时，对每个元素应用模式。
+ 通过在模式右边放置一个省略号...来触发扩展操作
+ (对模板参数包和函数参数包扩展)
+ (扩展中的模式会独立地应用于包中的每个元素)
+ */
+template <typename T, typename... Args>
+std::ostream&
+print(std::ostream& os, const T& t, const Args&... rest)
+{
+	os << t << ", ";
+	return print(os, debug_rep(rest)...);
+}
+
+template <typename... Args>
+void fun(Args&&... args) // 右值引用，可以传递任意类型的实参
+{
+	work(std::forward<Args>(args)...); // 所有类型信息在调用work时都会保持原样
+}
