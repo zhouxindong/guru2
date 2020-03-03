@@ -22,6 +22,9 @@
     <Filter Include="Header Files\STL">
       <UniqueIdentifier>{e18e6646-8c95-4d87-a9b9-65606cbf61b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\io">
+      <UniqueIdentifier>{260c83fe-f796-41b9-8f61-11ed593e0689}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="compound_type.h">
@@ -136,6 +139,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="tuple.h">
+      <Filter>Header Files\STL</Filter>
+    </ClInclude>
+    <ClInclude Include="iomanip.h">
+      <Filter>Header Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="macro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="member_pointer.h">
+      <Filter>Header Files\class</Filter>
+    </ClInclude>
+    <ClInclude Include="pimpl.h">
+      <Filter>Header Files\class</Filter>
+    </ClInclude>
+    <ClInclude Include="ratio.h">
+      <Filter>Header Files\STL</Filter>
+    </ClInclude>
+    <ClInclude Include="chrono.h">
       <Filter>Header Files\STL</Filter>
     </ClInclude>
   </ItemGroup>

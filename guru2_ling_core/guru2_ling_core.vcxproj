@@ -147,6 +147,7 @@
     <ClInclude Include="basic.h" />
     <ClInclude Include="built_array.h" />
     <ClInclude Include="callable.h" />
+    <ClInclude Include="chrono.h" />
     <ClInclude Include="compound_type.h" />
     <ClInclude Include="const.h" />
     <ClInclude Include="constexpr.h" />
@@ -160,14 +161,19 @@
     <ClInclude Include="friend.h" />
     <ClInclude Include="function.h" />
     <ClInclude Include="initializer_list.h" />
+    <ClInclude Include="iomanip.h" />
     <ClInclude Include="iterator_adapter.h" />
     <ClInclude Include="iterator_category.h" />
     <ClInclude Include="lambda.h" />
+    <ClInclude Include="macro.h" />
     <ClInclude Include="map_container.h" />
+    <ClInclude Include="member_pointer.h" />
     <ClInclude Include="operator.h" />
     <ClInclude Include="operator_new.h" />
     <ClInclude Include="overload_resolve.h" />
+    <ClInclude Include="pimpl.h" />
     <ClInclude Include="pod.h" />
+    <ClInclude Include="ratio.h" />
     <ClInclude Include="RTTI.h" />
     <ClInclude Include="rvalue.h" />
     <ClInclude Include="sequence_container.h" />

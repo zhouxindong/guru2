@@ -34,6 +34,9 @@
     <Filter Include="Header Files\STL_type_traits">
       <UniqueIdentifier>{c11c619a-3c2e-4c07-aeda-e98c9684e43c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\demo">
+      <UniqueIdentifier>{f177ee5a-408e-41a5-bc5f-04b5556b9b6b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class_template.h">
@@ -155,6 +158,12 @@
     </ClInclude>
     <ClInclude Include="friend.h">
       <Filter>Header Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="fixed_vector.h">
+      <Filter>Header Files\demo</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>Header Files\demo</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

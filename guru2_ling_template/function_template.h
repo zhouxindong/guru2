@@ -29,6 +29,8 @@ char const* max(char const* a, char const* b)
  * 从赋值函数模板生成的赋值函数也永远不能成为一个拷贝或移动赋值函数
  */
 
+//重载和特化对于模板函数都适用，要注意区别!!
+
 // 函数重载可以透明地对特定类型进行算法定制
 template <typename T>
 void quickExchange(T* a, T* b)

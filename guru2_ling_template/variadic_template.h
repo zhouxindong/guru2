@@ -102,3 +102,48 @@ void fun(Args&&... args) // 右值引用，可以传递任意类型的实参
 {
 	work(std::forward<Args>(args)...); // 所有类型信息在调用work时都会保持原样
 }
+
+/**
+ * 
+ 1. 类型参数包
+ 2. 非类型参数包
+ 3. 模板参数包
+ */
+template <typename I, template<typename> class... B>
+struct Container {};
+
+template <typename I, template<typename> class A, template<typename> class... B>
+struct Container<I, A, B...>
+{
+	A<I> a;
+	Container<I, B...> b;
+};
+
+template <typename I>
+struct Container<I> {};
+
+/**
+ * 另一种变长模板参数递归定义的例子
+ */
+template <typename... T>
+struct MultiTypes;
+
+template <typename T1, typename... T>
+struct MultiTypes<T1, T...> : public MultiTypes<T...>
+{
+	T1 t1;	// std::decay_t<T1> t1;
+	MultiTypes<T1, T...>(T1 a, T... b) :
+		t1(a), MultiTypes<T...>(b...) {}
+};
+
+template <>
+struct MultiTypes<>
+{
+};
+
+template <template <typename...> class VariadicType, typename... Args>
+VariadicType Build(Args&&... args)
+{
+	return VariadicType<Args...>(std::forward<Args>(args)...); // 要注意唯一类型推断为引用的情形
+															   // 可能会让对象的成员成为无效的引用
+}
