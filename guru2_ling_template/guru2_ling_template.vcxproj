@@ -143,6 +143,7 @@
     <ClInclude Include="basic.h" />
     <ClInclude Include="class_template.h" />
     <ClInclude Include="compound_type.h" />
+    <ClInclude Include="concept_detect.h" />
     <ClInclude Include="CRTP.h" />
     <ClInclude Include="debug_it.h" />
     <ClInclude Include="decay.h" />
@@ -178,6 +179,7 @@
     <ClInclude Include="type_erasure.h" />
     <ClInclude Include="type_list.h" />
     <ClInclude Include="value_metaprogram.h" />
+    <ClInclude Include="value_ptr.h" />
     <ClInclude Include="variable_template.h" />
     <ClInclude Include="variadic_template.h" />
     <ClInclude Include="Variant.h" />

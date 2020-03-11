@@ -165,6 +165,12 @@
     <ClInclude Include="Stack.h">
       <Filter>Header Files\demo</Filter>
     </ClInclude>
+    <ClInclude Include="concept_detect.h">
+      <Filter>Header Files\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="value_ptr.h">
+      <Filter>Header Files\demo</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="MP.txt">

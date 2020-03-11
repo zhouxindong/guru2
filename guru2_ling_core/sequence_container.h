@@ -22,3 +22,11 @@
  insert(it, b, e)
  insert(it, li)
  */
+
+// 清空vector的一种方法
+/**
+ * 
+ vector<Custome> c(10000);
+ vector<Custome>().swap(c);
+
+ */

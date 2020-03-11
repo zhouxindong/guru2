@@ -183,3 +183,23 @@ public:
 		(reinterpret_cast<X*>(&x_[0]))->~X();
 	}
 };
+
+/**
+ * operator new内存分配如果失败，则抛出std::bad_alloc异常(之前会调用new-handler
+ ，可以通过set_new_handler指定)
+ void(*new_handler)();
+ new_handler set_new_handler(new_handler p);
+
+ 可以让某个类供应自己的set_new_handler和operator new
+ */
+class X1 {
+public:
+	static new_handler set_new_handler(new_handler p);
+
+	static void* operator new(size_t size);
+
+private:
+	static new_handler currentHandler;
+};
+
+new_handler X1::currentHandler;

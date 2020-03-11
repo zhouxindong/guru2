@@ -25,6 +25,9 @@
     <Filter Include="Header Files\io">
       <UniqueIdentifier>{260c83fe-f796-41b9-8f61-11ed593e0689}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\thread">
+      <UniqueIdentifier>{d5820a44-0024-42d7-a750-9a6e7eed4f81}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="compound_type.h">
@@ -158,6 +161,15 @@
     </ClInclude>
     <ClInclude Include="chrono.h">
       <Filter>Header Files\STL</Filter>
+    </ClInclude>
+    <ClInclude Include="atomic_type.h">
+      <Filter>Header Files\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="base.h">
+      <Filter>Header Files\io</Filter>
+    </ClInclude>
+    <ClInclude Include="copy_on_write.h">
+      <Filter>Header Files\class</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

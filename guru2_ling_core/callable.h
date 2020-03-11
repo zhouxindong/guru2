@@ -130,3 +130,34 @@ decltype(auto) call(Callable&& op, Args&&... args) // decltype(auto)可以返回ref,
  first_argument_type
  second_argument_type
  */
+
+/**
+ * 一个函数如何返回指向自身的指针？
+ 创建一个代理类，接受它想要的指针类型，同时还有一个隐式转换，用以转换到它想要的指针类型
+ */
+class FuncPtr_;
+
+typedef FuncPtr_(*FuncPtr)();
+
+class FuncPtr_
+{
+public:
+	FuncPtr_(FuncPtr p) : p_(p) {}
+
+	operator FuncPtr() {
+		return p_;
+	}
+
+private:
+	FuncPtr p_;
+};
+
+FuncPtr_ f() {
+	return f;
+}
+
+int main()
+{
+	FuncPtr p = f();
+	p();
+}
