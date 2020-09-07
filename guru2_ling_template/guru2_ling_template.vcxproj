@@ -138,55 +138,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="base_member.h" />
-    <ClInclude Include="basic.h" />
-    <ClInclude Include="class_template.h" />
-    <ClInclude Include="compound_type.h" />
-    <ClInclude Include="concept_detect.h" />
-    <ClInclude Include="CRTP.h" />
-    <ClInclude Include="debug_it.h" />
-    <ClInclude Include="decay.h" />
-    <ClInclude Include="detect_member.h" />
-    <ClInclude Include="dot_template.h" />
-    <ClInclude Include="enable_if.h" />
-    <ClInclude Include="explicit_instantiation.h" />
-    <ClInclude Include="fixed_vector.h" />
-    <ClInclude Include="friend.h" />
-    <ClInclude Include="function_template.h" />
-    <ClInclude Include="if_then_else.h" />
-    <ClInclude Include="integral_constant.h" />
-    <ClInclude Include="is_convertible.h" />
-    <ClInclude Include="mixins.h" />
-    <ClInclude Include="nontype_template_paramter.h" />
-    <ClInclude Include="perfect_forwarding.h" />
-    <ClInclude Include="policy_traits.h" />
-    <ClInclude Include="predicate.h" />
-    <ClInclude Include="primary_type.h" />
-    <ClInclude Include="qualifier.h" />
-    <ClInclude Include="Ratio.h" />
-    <ClInclude Include="raw_array.h" />
-    <ClInclude Include="reference.h" />
-    <ClInclude Include="result_of.h" />
-    <ClInclude Include="result_type.h" />
-    <ClInclude Include="SFINAE.h" />
-    <ClInclude Include="special_member_template.h" />
-    <ClInclude Include="Stack.h" />
-    <ClInclude Include="template_kind.h" />
-    <ClInclude Include="Tuple.h" />
-    <ClInclude Include="type_classification.h" />
-    <ClInclude Include="type_deduce.h" />
-    <ClInclude Include="type_erasure.h" />
-    <ClInclude Include="type_list.h" />
-    <ClInclude Include="value_metaprogram.h" />
-    <ClInclude Include="value_ptr.h" />
-    <ClInclude Include="variable_template.h" />
-    <ClInclude Include="variadic_template.h" />
-    <ClInclude Include="Variant.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="MP.txt" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

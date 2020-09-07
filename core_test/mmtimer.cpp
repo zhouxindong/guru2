@@ -19,12 +19,12 @@ void proc(UINT uTimerID, UINT uMsg, DWORD_PTR dwUser, DWORD_PTR dw1, DWORD_PTR d
 class C {
 };
 
-//int main()
-//{
-//	mmTimer timer;
-//	timer.Start(1, proc, &timer, true);
-//
-//	system("pause");
-//	
-//	return 0;
-//}
+int main()
+{
+	mmTimer timer;
+	timer.Start(1, proc, &timer, true);
+
+	system("pause");
+	
+	return 0;
+}

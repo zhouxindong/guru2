@@ -139,55 +139,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="aggregate.h" />
-    <ClInclude Include="algorithm.h" />
-    <ClInclude Include="allocator.h" />
-    <ClInclude Include="atomic_type.h" />
-    <ClInclude Include="auto.h" />
-    <ClInclude Include="base.h" />
-    <ClInclude Include="basic.h" />
-    <ClInclude Include="built_array.h" />
-    <ClInclude Include="callable.h" />
-    <ClInclude Include="chrono.h" />
-    <ClInclude Include="compound_type.h" />
-    <ClInclude Include="const.h" />
-    <ClInclude Include="constexpr.h" />
-    <ClInclude Include="container.h" />
-    <ClInclude Include="copy_on_write.h" />
-    <ClInclude Include="ctor.h" />
-    <ClInclude Include="declaration_definition.h" />
-    <ClInclude Include="decltype.h" />
-    <ClInclude Include="declval.h" />
-    <ClInclude Include="delegate_ctor.h" />
-    <ClInclude Include="derived_ctor.h" />
-    <ClInclude Include="friend.h" />
-    <ClInclude Include="function.h" />
-    <ClInclude Include="initializer_list.h" />
-    <ClInclude Include="iomanip.h" />
-    <ClInclude Include="iterator_adapter.h" />
-    <ClInclude Include="iterator_category.h" />
-    <ClInclude Include="lambda.h" />
-    <ClInclude Include="macro.h" />
-    <ClInclude Include="map_container.h" />
-    <ClInclude Include="member_pointer.h" />
-    <ClInclude Include="operator.h" />
-    <ClInclude Include="operator_new.h" />
-    <ClInclude Include="overload_resolve.h" />
-    <ClInclude Include="pimpl.h" />
-    <ClInclude Include="pod.h" />
-    <ClInclude Include="ratio.h" />
-    <ClInclude Include="RTTI.h" />
-    <ClInclude Include="rvalue.h" />
-    <ClInclude Include="sequence_container.h" />
-    <ClInclude Include="shared_ptr.h" />
-    <ClInclude Include="static.h" />
-    <ClInclude Include="swap.h" />
-    <ClInclude Include="tuple.h" />
-    <ClInclude Include="unorder_container.h" />
-    <ClInclude Include="value_category.h" />
-    <ClInclude Include="value_or_ref.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
